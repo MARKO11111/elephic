@@ -1,0 +1,14 @@
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@function toRem($value) {
+    $remValue: ($value / $fs-base) + rem; 
+    @return $remValue;
+}

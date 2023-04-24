@@ -1,0 +1,72 @@
+.accordion {
+    &__button {
+        cursor: pointer;
+        padding: 0.75rem 0.3125rem 0.75rem 0;
+        width: 100%;
+        text-align: left;
+        outline: none;
+        border: none;
+        background: transparent;
+        transition: 0.4s;
+        color: $primary-text-color;
+        font-family: TitilliumWebBold;
+        font-size: 1.5rem;
+        border-bottom: 2px solid $yellow;
+        @include flex-center();
+        justify-content: space-between;
+        &:first-child {
+            border-top: 2px solid $yellow;
+        }
+        &.active {
+            .vertical {
+                display: none;
+            }
+            + .accordion__panel {
+                border-bottom: 2px solid $yellow;
+            }
+        }
+        @media (max-width: $tablet) {
+            font-size: 1.25rem;
+        }
+        @media (max-width: $tablet) {
+            font-size: 1rem;
+        }
+    }
+    &__panel {
+        background-color: #301a49;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        font-family: TitilliumWebSemiBold;
+        font-size: 1.125rem;
+        @media (max-width: $tablet) {
+            font-size: 1rem;
+        }
+        @media (max-width: $tablet) {
+            font-size: 0.875rem;
+        }
+        p {
+            margin: 1.25rem;
+        }
+    }
+    &__icon {
+        width: 15px;
+        height: 15px;
+        display: inline-block;
+        span {
+            width: 15px;
+            height: 2px;
+            background-color: rgb(1, 238, 246);
+            display: block;
+            &.vertical {
+                transform: rotate(90deg);
+                position: relative;
+                top: 3px;
+            }
+            &.horizontal {
+                position: relative;
+                top: 5px;
+            }
+        }
+    }
+}

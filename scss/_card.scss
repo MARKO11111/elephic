@@ -1,0 +1,26 @@
+.card {
+    background: #301a49;
+    border-radius: 0.3125rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    padding: 1.25rem;
+    font-size: 0.875rem;
+    border: 3px solid #301a49;
+    &__title {
+        font-size: 1.25rem;
+        font-family: QuicksandBold;
+    }
+    &__link {
+        font-family: TitilliumWebBold;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.625rem;
+    }
+    &:hover {
+        background: transparent;
+        cursor: pointer;
+        border: 3px solid $yellow;
+        box-shadow: 0px 0px 5px 0px rgba(243,228,1,1);
+    }
+}
